@@ -1,8 +1,8 @@
 require 'net/http'
- require 'open-uri'
- require 'json'
- 
- class GetPrograms
+require 'open-uri'
+require 'json'
+
+class GetPrograms
 
   URL = "http://data.cityofnewyork.us/resource/uvks-tn5n.json"
 
@@ -21,5 +21,5 @@ require 'net/http'
 
 end
 
- programs = GetPrograms.new.get_programs
- puts programs
+programs = GetPrograms.new.program_school
+puts programs.uniq
